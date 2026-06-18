@@ -441,8 +441,6 @@ def histori():
     print("=======================================================================================")
 
 ## Definisi Prosedur reset_data()
-# Kamus lokal  
-# (tidak ada variabel lokal)
 def reset_data():
     global nama, kategori, lama, tot_harga, tgl_in, tgl_out, jmlh
     nama = [None] * max_data
@@ -457,8 +455,6 @@ def reset_data():
     print("=================================")
 
 ## Definisi Prosedur beres()
-# Kamus lokal  
-# (tidak ada variabel lokal)
 def beres():
     print()
     print("Sistem ditutup, terima kasih!")
