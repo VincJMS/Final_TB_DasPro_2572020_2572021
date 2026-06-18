@@ -367,31 +367,31 @@ def bulanan():
 # Kamus lokal  
 # cari : var. penampung nama pelanggan yang dicari dari user (string) 
 # found : var. penanda apakah data pelanggan berhasil dicari (boolean) 
-# i : var. counter indeks perulangan pelanggan (int) 
+# i : var. counter indeks perulangan pelanggan (int)  
 def cari_pelanggan():
-    if(jmlh==0):
+    if(jmlh == 0):
         print()
         print("Belum ada data pelanggan untuk dicari!")
         return
     print()
-    print("=== Cari Pelanggan ===")
+    print("=== Cari Pelanggan (Exact Match) ===")
     cari = input("Masukkan nama pelanggan yang dicari: ")
     found = False
-    for i in range(0,jmlh,1):
-        if(cari in nama[i]):
+    for i in range(0, jmlh, 1):
+        if(cari == nama[i]):
             print()
             print(f"[Data Ditemukan di Indeks ke-{i}]")
-            print(f"Nama Pelanggan\t: {nama[i]}")
-            print(f"Kategori Paket\t: {kategori[i]}")
-            print(f"Lama Pengerjaan\t: {lama[i]} hari")
-            print(f"Tanggal Masuk\t: {tgl_in[i][0]}/{tgl_in[i][1]}/{tgl_in[i][2]}")
-            print(f"Tanggal Selesai\t: {tgl_out[i][0]}/{tgl_out[i][1]}/{tgl_out[i][2]}")
-            print(f"Total Bayar\t: Rp{tot_harga[i]}")
+            print(f"Nama Pelanggan  : {nama[i]}")
+            print(f"Kategori Paket  : {kategori[i]}")
+            print(f"Lama Pengerjaan : {lama[i]} hari")
+            print(f"Tanggal Masuk   : {tgl_in[i][0]}/{tgl_in[i][1]}/{tgl_in[i][2]}")
+            print(f"Tanggal Selesai : {tgl_out[i][0]}/{tgl_out[i][1]}/{tgl_out[i][2]}")
+            print(f"Total Bayar     : Rp{tot_harga[i]}")
             print("-" * 30)
             found = True
-    if(found==False):
+    if(found == False):
         print()
-        print(f" Pelanggan dengan nama '{cari}' tidak ditemukan.")
+        print(f">> Pelanggan dengan nama '{cari}' tidak ditemukan.")
 
 ## Definisi Prosedur histori()
 # Kamus lokal  
