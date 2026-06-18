@@ -2,29 +2,6 @@
 # Penulis : Jason Manuel Simadibrata, Nicolas Elnathan
 # Tujuan Program : Sistem Laundry
 
-## Definisi Fungsi hitung_panjang(kata)
-# Kamus lokal  
-# kata : parameter input berupa teks (string) 
-# n : var. counter untuk menghitung jumlah karakter (int) 
-# c : var. penampung karakter saat iterasi (string) 
-def hitung_panjang(kata):
-    n = 0
-    for c in kata:
-        n += 1
-    return n
-
-## Definisi Prosedur cetak_rata_kiri(kata, lebar)
-# Kamus lokal  
-# kata : parameter input berupa teks yang akan dicetak (string) 
-# lebar : parameter input untuk batas lebar kolom (int) 
-# p : var. panjang karakter dari teks kata (int) 
-# i : var. counter untuk mencetak spasi sisa (int) 
-def cetak_rata_kiri(kata, lebar):
-    p = hitung_panjang(kata)
-    print(kata, end="")
-    for i in range(0,lebar-p,1):
-        print(" ", end="")
-
 ## Definisi Prosedur cetak_baris(no_str, nama_str, kat_str, in_str, out_str, tot_str)
 # Kamus lokal  
 # no_str, nama_str, kat_str, in_str, out_str, tot_str : parameter berisi data kolom tabel (string) 
@@ -51,6 +28,29 @@ def adalah_angka(s):
         if(c!="0" and c!="1" and c!="2" and c!="3" and c!="4" and c!="5" and c!="6" and c!="7" and c!="8" and c!="9"):
             valid = False
     return valid
+    
+## Definisi Fungsi hitung_panjang(kata)
+# Kamus lokal  
+# kata : parameter input berupa teks (string) 
+# n : var. counter untuk menghitung jumlah karakter (int) 
+# c : var. penampung karakter saat iterasi (string) 
+def hitung_panjang(kata):
+    n = 0
+    for c in kata:
+        n += 1
+    return n
+
+## Definisi Fungsi cetak_rata_kiri(kata, lebar)
+# Kamus lokal  
+# kata : parameter input berupa teks yang akan dicetak (string) 
+# lebar : parameter input untuk batas lebar kolom (int) 
+# p : var. panjang karakter dari teks kata (int) 
+# i : var. counter untuk mencetak spasi sisa (int) 
+def cetak_rata_kiri(kata, lebar):
+    p = hitung_panjang(kata)
+    print(kata, end="")
+    for i in range(0,lebar-p,1):
+        print(" ", end="")
 
 ## Definisi Fungsi adalah_desimal(s)
 # Kamus lokal  
@@ -210,7 +210,7 @@ def nyuci():
     tgl_in[jmlh] = [hr, bln, thn]
     tgl_out[jmlh] = [hr_out, bln_out, thn_out]
     print()
-    print(f">> Data disimpan. Total harga: Rp{tot}")
+    print(f" Data disimpan. Total harga: Rp{tot}")
     print("=================================")
     jmlh += 1
 
@@ -318,10 +318,10 @@ def harian():
             found = True
     if(found==True):
         print()
-        print(f">> Total pemasukan pada tanggal {hr}/{bln}/{thn} adalah: Rp{tot_hr}")
+        print(f" Total pemasukan pada tanggal {hr}/{bln}/{thn} adalah: Rp{tot_hr}")
     else:
         print()
-        print(">> Tidak ada transaksi pada tanggal tersebut.")
+        print(" Tidak ada transaksi pada tanggal tersebut.")
 
 ## Definisi Prosedur bulanan()
 # Kamus lokal  
@@ -358,10 +358,10 @@ def bulanan():
             found = True
     if(found==True):
         print()
-        print(f">> Total pemasukan bulan {tar}/{tar_thn}: Rp{tot_bln}")
+        print(f" Total pemasukan bulan {tar}/{tar_thn}: Rp{tot_bln}")
     else:
         print()
-        print(f">> Tidak ada transaksi pada bulan {tar}/{tar_thn}.")
+        print(f" Tidak ada transaksi pada bulan {tar}/{tar_thn}.")
 
 ## Definisi Prosedur cari_pelanggan()
 # Kamus lokal  
@@ -391,7 +391,7 @@ def cari_pelanggan():
             found = True
     if(found==False):
         print()
-        print(f">> Pelanggan dengan nama '{cari}' tidak ditemukan.")
+        print(f" Pelanggan dengan nama '{cari}' tidak ditemukan.")
 
 ## Definisi Prosedur histori()
 # Kamus lokal  
@@ -453,7 +453,7 @@ def reset_data():
     tgl_out = [None] * max_data
     jmlh = 0
     print()
-    print(">> Semua data transaksi telah di-reset!")
+    print(" Semua data transaksi telah di-reset!")
     print("=================================")
 
 ## Definisi Prosedur beres()
