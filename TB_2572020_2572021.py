@@ -391,7 +391,7 @@ def cari_pelanggan():
             found = True
     if(found == False):
         print()
-        print(f">> Pelanggan dengan nama '{cari}' tidak ditemukan.")
+        print(f" Pelanggan dengan nama '{cari}' tidak ditemukan.")
 
 ## Definisi Prosedur histori()
 # Kamus lokal  
